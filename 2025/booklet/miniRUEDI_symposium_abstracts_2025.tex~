@@ -56,7 +56,8 @@
 \medskip
 
 % presented by
-{\bfseries presented by #2}\par
+%%% {\bfseries presented by #2}\par
+{\bfseries #2}\par
 
 % affiliation(s)
 {#3\par}
