@@ -1,0 +1,11 @@
+\begin{conf-abstract}
+{Taking the miniRuedi to the (shaking) spa}
+{Sebastien Giroud}
+{Eawag, Swiss Federal Institute of Aquatic Science and Technology}
+{The relationship between seismic activity and dissolved gas concentrations in geological fluids remains a contentious issue and is hotly debated. Although some correlations between changes in gas composition and seismicity have been identified, these often rely on observations of occasional events rather than long-term time series. Due to the lack of systematic assessments, it is difficult and complex to establish a causal connection between changing gas dynamics and earthquakes [1].
+
+Incorporating a custom-built heating box into the miniRuedi setup has introduced new possibilities for addressing this question [2]. The primary aim of this heating box is to provide an optimal analytical environment to the membrane module, allowing the miniRuedi to continuously monitor dissolved gases in (hot) thermal fluids. This enabled the deployment of the miniRuedi in a seismically active region of Switzerland, with the aim of investigating the potential link between gas dynamics in terrestrial fluids and active seismicity. There, the Lavey-les-Bains hot springs discharge geothermal fluids with temperatures ranging between 50 °C and 65 °C. The instrument recorded dissolved gas concentrations for over a year at high-frequency intervals of approx. 6 minutes, providing quasi-continuous measurements of He, Ar, Kr, N2, O2, H2, CH4, and CO2 data. The extensive dataset ($>$200’000 gas measurements) represents a robust experimental basis to critically evaluate the possible causal link between gas evolution in geological fluids and seismicity.
+
+1. Toutain et Baubron (1999), Tectonophysics, 304, 1-27\\
+2. Giroud et al. (2023), Front. Water, Vol. 4}
+\end{conf-abstract}

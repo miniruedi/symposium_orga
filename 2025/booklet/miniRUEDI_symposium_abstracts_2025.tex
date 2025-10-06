@@ -1,0 +1,267 @@
+\documentclass[12pt]{extbook}
+
+\usepackage[a4paper,margin=1.2in,innermargin=1.2in]{geometry}
+\usepackage[parfill]{parskip}
+
+\usepackage{mathpazo} % add possibly `sc` and `osf` options
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{needspace}
+\usepackage{marginnote} \renewcommand*{\marginfont}{\sffamily\footnotesize}
+\usepackage{wasysym}
+\usepackage[yyyymmdd]{datetime}
+
+\renewcommand{\dateseparator}{--}
+
+
+% \usepackage{imakeidx}
+% \usepackage{hyperref}
+% \makeindex[intoc]
+
+\usepackage{etoolbox}
+\newcommand{\indexauthors}[1]{%
+  \forcsvlist{\index}{#1}
+}
+
+\newcommand{\breaktime}[1]{
+\bigskip
+\begin{center}
+\Large\bfseries ***** Break #1 *****
+\end{center}
+\bigskip}
+
+\renewcommand{\breaktime}[1]{}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+\newcommand{\abstract}[2]{{
+\bigskip
+\begin{center}
+\large\bfseries #1
+\end{center}}
+\par
+\input{#2}
+\clearpage
+}
+
+\newenvironment{conf-abstract}[4]{
+\begin{center}
+% title
+{\Large\bfseries #1}\par
+\medskip
+
+% presented by
+{\bfseries presented by #2}\par
+
+% affiliation(s)
+{#3\par}
+
+% text
+\end{center}
+{\small #4}
+\medskip
+}{
+%\clearpage
+}
+
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{-1}
+\pagestyle{plain}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+
+{\LARGE \bf miniRUEDI Symposium}
+
+\bigskip
+
+{\large \bf 18--20 November 2025}
+
+\bigskip
+
+{\large \bf Eawag, Überlandstrasse 133, 8600 Dübendorf, Switzerland}
+
+\bigskip
+\bigskip
+\bigskip
+
+
+% 30 presentations
+% total time: 600 min
+% --> 20 min per presentation (12 min + 5 min question + 3 min change)
+
+
+
+\newcolumntype{u}[1]{D{--}{--}{#1}}
+
+
+\begin{tabular}{c@{\hskip 0.5in}l}
+
+\multicolumn{2}{c}{\bf Tuesday, 18 Nov 2025}\\[2ex]
+% Aqualino
+\phantom{1}9:00  -- \phantom{1}9:30	  &	Coffee and snacks\\
+\phantom{1}9:30  -- \phantom{1}9:40	  &	Welcome\\
+\phantom{1}9:40  -- 10:00	  &	Introduction\\
+10:00  -- 10:40	&	Presentations\\   % 2 presentations
+10:40 -- 11:10	&	Break\\
+11:10 -- 12:10	& Presentations\\   % 3 presentations
+12:10 -- 14:00	&	Lunch at Eawag\\
+14:00 -- 15:00	&	Presentations\\   % 3 presentations
+15:00 -- 15:30	&	Break\\
+15:30 -- 16:30	&	Presentations\\[8ex]   % 3 presentations
+
+\multicolumn{2}{c}{\bf Wednesday, 19 Nov 2025}\\[2ex]
+% Aqualino
+\phantom{1}9:00  -- \phantom{1}9:30	  &	Coffee and snacks\\
+\phantom{1}9:30  -- 10:30	&	Presentations\\   % 3 presentations
+10:30 -- 11:00	&	Break\\
+11:00 -- 12:00	& Presentations\\   % 3 presentations
+12:00 -- 14:00	&	Lunch at Eawag\\
+14:00 -- 15:00	&	Presentations\\   % 3 presentations
+15:00 -- 15:30	&	Break\\
+15:30 -- 16:30	&	Presentations\\   % 3 presentations
+18:00 \phantom{-- 00:00}	&	Group dinner (open end)\\[8ex]
+
+\multicolumn{2}{c}{\bf Thursday, 20 Nov 2025}\\[2ex]
+% C23
+\phantom{1}9:00  -- \phantom{1}9:30	  &	Coffee and snacks\\
+\phantom{1}9:30  -- 10:30	&	Presentations\\   % 3 presentations
+10:30 -- 11:00	&	Break\\
+11:00 -- 11:40	& Presentations\\   % 2 presentations
+12:00 -- 14:00	&	Lunch at Eawag\\
+14:00 -- 15:00	&	miniRUEDI hands-on, lab tour\\[1.5ex]
+
+%%% End of miniRUEDI Symposium
+\end{tabular}
+
+\enlargethispage{2cm}
+\vfill
+\renewcommand{\dateseparator}{--}
+{\hfill \tiny \today}
+
+\end{center}
+
+\clearpage
+
+
+% intro/overview, then bottom-up
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/West}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Blanc}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Aardema}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Brennwald}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Cateland}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/vanRooyen}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Lightfoot}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Peel}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Musy}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Seltzer}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/PAULSELVADURAI}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Tomonaga}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/MoserRoeggla}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/BEN}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/HarveyBugher}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Helbing}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Welham}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/Marion}
+
+\abstract{XY Nov 2025, HH:MM--HH:MM}{abstracts/WILMACE}
+
+
+
+
+
+% %%%%%%%% DAY 1
+% \abstract{21 Nov 2023, 10:00--10:40}{abstracts/Giroud} % seismics, deep fluids
+%
+% \breaktime{30 min}
+%
+% \abstract{21 Nov 2023, 11:10--11:30}{abstracts/Moeck} % Hardwald
+% \abstract{21 Nov 2023, 11:30--11:50}{abstracts/Roques} % seismics, gas release from rocks
+% \abstract{21 Nov 2023, 11:50--12:10}{abstracts/Lightfoot} % seismics, gas release from rocks
+%
+% \breaktime{ / Lunch}
+%
+% \abstract{21 Nov 2023, 14:00--14:20}{abstracts/Dutoit} % drill gas monitoring
+% \abstract{21 Nov 2023, 14:20--14:40}{abstracts/Strauch_Zimmer} % geothermal fluids, pump test
+% \abstract{21 Nov 2023, 14:40--15:00}{abstracts/Wang} % CO2, CH4 turnover and massbalance in groundwater-fed river
+% % soil / water / atmosphere
+%
+% \breaktime{30 min}
+%
+% \abstract{21 Nov 2023, 15:30--15:50}{abstracts/Kipfer} % (groundwater) examples
+% \abstract{21 Nov 2023, 15:50--16:10}{abstracts/vanRooyen} % Hardwald
+% \abstract{21 Nov 2023, 16:10--16:30}{abstracts/Gisiger} % Demo high-pressure MIMS
+% %% CANCELLED \abstract{21 Nov 2023, 16:10--16:30}{abstracts/Ortega} % wetlands, IAEA approach
+%
+%
+% %%%%%%%% DAY 2
+% \abstract{22 Nov 2023, 9:30--9:50}{abstracts/Jacops} % lab, gas diffusion in clay rocks
+% \abstract{22 Nov 2023, 9:50--10:10}{abstracts/Tomonaga} % GAST, rad waste
+% \abstract{22 Nov 2023, 10:10--10:30}{abstracts/Kim} % He, rad waste
+%
+% \breaktime{30 min}
+%
+% \abstract{22 Nov 2023, 11:00--11:20}{abstracts/vanLeeuw} % microbes, radwaste %%% Regarding the planning, our flight will arrive in Zurich on the 21st in the late afternoon, so it would be convenient to schedule our presentation on Wednesday or Thursday morning.
+% \abstract{22 Nov 2023, 11:20--11:40}{abstracts/Currle} % microbes, riverbank filtration
+% \abstract{22 Nov 2023, 11:40--12:00}{abstracts/Finger}
+%
+% \breaktime{ / Lunch}
+%
+% % IDEA: move my 1400 slot to 15.50, then have Oli present at 1400 about Quebec. Needs confirmation from Oli.
+%
+% \abstract{22 Nov 2023, 14:00--14:20}{abstracts/Schilling} % Quebec
+% \abstract{22 Nov 2023, 14:20--14:40}{abstracts/Brennwald} % Geothermal groundwater input to rivers
+% \abstract{22 Nov 2023, 14:40--15:00}{abstracts/Blanc} % He injection to river as artificial tracer
+%
+%
+% \breaktime{30 min}
+%
+% \abstract{22 Nov 2023, 15:30--15:50}{abstracts/Marion} % trees
+% \abstract{22 Nov 2023, 15:50--16:10}{abstracts/Picard} % technisches, offline samples
+% %%% CANCELLED \abstract{22 Nov 2023, 15:50--16:10}{abstracts/Hillegonds} % technisches, offline samp
+% \abstract{22 Nov 2023, 16:10--16:30}{abstracts/Engelhardt} % technisches, Omnistar
+%
+%
+% %%%%%%%% DAY 3
+%
+% % groundwater, (not so) shallow
+% \abstract{23 Nov 2023, 9:30--9:50}{abstracts/Musy} % Fuji
+% %%% CANCELLED \abstract{23 Nov 2023, 9:50--10:10}{abstracts/Zhao} % Golmud
+% \abstract{23 Nov 2023, 9:50--10:10}{abstracts/Rinaldi} % Mt Terri FSC
+% \abstract{23 Nov 2023, 10:10--10:30}{abstracts/GroegerTrampe} % N2 excess, nitrate pollution
+%
+% \breaktime{30 min}
+%
+% \abstract{23 Nov 2023, 11:00--11:20}{abstracts/Iwe} % surface water
+% \abstract{23 Nov 2023, 11:20--11:40}{abstracts/Slagter} % Seybold
+%
+
+
+
+\end{document}

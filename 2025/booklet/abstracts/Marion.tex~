@@ -1,0 +1,6 @@
+\begin{conf-abstract}
+{New tool for in-situ gas measurements in low flow porous media}
+{C. Marion, C. Ebi, S. Bloem, M.S. Brennwald, R. Kipfer}
+{Eawag}
+{Dummy dummy to be improved and checked by co-authors: Gases, including noble gases, are powerful tracers in environmental science, widely used to study groundwater flow dynamics and surface–subsurface water interactions (Brennwald et al. 2022, Blanc et al. 2024, Schilling 2017, Schilling 2021, Peel 2022 & 2023). However, most applications focus on high-flow systems (L/min to L/s), while in-situ gas measurements in low-flow porous media (L/h), such as soil unsaturated and saturated zones or plant tissues, remain technically challenging—despite their critical role in the global hydrological cycle. We present a robust, field-deployable gas probe for long-term, in-situ gas monitoring in low-permeability or low-flow environments. The device consists of a gas-tight, 3D-printed body with an integrated pressure sensor and gas-permeable membranes that allow diffusion of target gases into the probe’s headspace for subsequent sampling and analysis. Originally developed for in-vivo gas monitoring in tree xylem (Marion et al., 2024), this method enables non-destructive, high-resolution measurements applicable to a variety of porous media, including soil, sediment, rock, and biological tissue.}
+\end{conf-abstract}
