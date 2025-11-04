@@ -27,20 +27,6 @@
   \forcsvlist{\index}{#1}
 }
 
-\newcommand{\breaktime}[1]{
-\bigskip
-\begin{center}
-\Large\bfseries ***** Break #1 *****
-\end{center}
-\bigskip}
-
-\renewcommand{\breaktime}[1]{}
-
-\newenvironment{absolutelynopagebreak}
-  {\par\nobreak\vfil\penalty0\vfilneg
-   \vtop\bgroup}
-  {\par\xdef\tpd{\the\prevdepth}\egroup
-   \prevdepth=\tpd}
 
 \newcommand{\abstract}[2]{
 %{
