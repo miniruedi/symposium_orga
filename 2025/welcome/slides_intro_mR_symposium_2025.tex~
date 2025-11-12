@@ -1,0 +1,292 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+%\documentclass[handout]{beamer}
+
+\graphicspath{{figures}}
+
+% PACKAGE INCLUDES:f
+\usepackage{amsmath}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{datetime} % for dates in english format
+\usefonttheme{default}
+\setbeamercolor*{structure}{fg=black,bg=}
+\setbeamercolor*{normal text}{fg=black,bg=}
+\setbeamertemplate{navigation symbols}{}  % suppress navigation symbols
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{background2.jpg}}
+\usepackage{translator}\selectlanguage{english}
+\usepackage{MnSymbol}
+\usepackage[utf8]{inputenc} 
+\usepackage{ragged2e}\justifying % Blocksatz im Fliesstext (mit Silbentrennung)
+\usepackage[T1]{fontenc} % für Trennung von Wörtern mit Umlauten
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{epstopdf} \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+\usepackage[version=4]{mhchem} \mhchemoptions{mathfontcommand=\mathsf}
+\usepackage{cancel}
+%\usepackage{wasysym} % per permil symbol
+%\usepackage{skull} % for skull symbol
+%\usepackage{marvosym} % for lightning symol
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{siunitx} \sisetup{separate-uncertainty=true}
+\usepackage{marvosym}
+\usepackage{pifont}
+
+
+% COMMAND (RE)DEFINITIONS
+% \renewcommand{\thefootnote}{\ensuremath{*}} % all footnotes use a "*" marker (which is identical to the star used for equilibrium conentrations!)
+\renewcommand{\thefootnote}{\ensuremath{\star}} % all footnotes use a star marker (which is really similar to the star used for equilibrium conentrations!)
+% \renewcommand{\thefootnote}{\ensuremath{\ddagger}} % all footnotes use a "*" marker
+\renewcommand{\footnoterule}{\vspace{1ex}} % don't draw a horizontal rule (may be confusing if footnote does not appear on first overlay, but leave some space
+\let\footnotesize\scriptsize % use smaller font for footnotes
+\newcommand{\degC}{\ensuremath{^{\circ}\text{C}}}
+\newcommand{\vstretch}[1]{\vspace{\stretch{#1}}}
+\newcommand{\hstretch}[1]{\hspace{\stretch{#1}}}
+
+\newcommand{\conc}[1]{\ensuremath{C_{#1}}} % konzentration von substanz i
+\newcommand{\concEq}[1]{\ensuremath{\conc{i}^*}} % glgw-konzentration von substanz i
+\newcommand{\Tw}{\ensuremath{T_\text{W}}} % T_W
+\newcommand{\pTot}{\ensuremath{p_{\text{tot}}}} % totaldruck
+\newcommand{\pp}[1]{\ensuremath{p_{#1}}} % partialdruck von substanz i
+\newcommand{\mb}[1]{\ensuremath{\chi_{#1}}} % molenbruch von substanz i
+\newcommand{\henry}[1]{\ensuremath{H_{#1}}} % henrykoeffizient von substanz i
+\newcommand{\henryInv}[1]{\ensuremath{\lambda_{#1}}} % inverser henrykoeffizient von substanz i
+
+
+\title{Noble Gas Tracing of \ce{CO2} Injection Fluids for\\ Carbon Capture and Storage (CCS)\\ using the miniRUEDI}
+
+% \author{M.S.~Brennwald*, J.~Junker, R.~Kipfer, A.~Obermann, M.~Voigt, C.~Wang, A.~Zappone\\[5ex] \small *Swiss Federal Institute of Aquatic Science and Technology (Eawag)}
+
+\date{miniRUEDI Symposium 19 Nov 2025 in Zurich}
+
+
+
+\author{M.S.~Brennwald\textsuperscript{1*}, J.~Junker\textsuperscript{2}, R.~Kipfer\textsuperscript{1,2}, A.~Obermann\textsuperscript{2}, M.~Voigt\textsuperscript{3}, C.~Wang\textsuperscript{1}, A.~Zappone\textsuperscript{2}\\[5ex] \scriptsize 1: Swiss Federal Institute of Aquatic Science and Technology (Eawag)\\[1ex] 2: Swiss Federal Institute of Technology in Zurich (ETHZ)\\[1ex] 3: Carbfix hf.}
+
+% \author{Brennwald}
+
+
+% \date{9 July 2025 / Goldschmidt 2025}
+
+
+% FORMATTING BEAMER THINGS
+\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{frametitle}{
+\centerline{\mbox{\insertframetitle}}
+\par
+} 
+
+% \newcommand{\defaultframetitle}{\frametitle{\mbox{\insertsection}}}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+\begin{frame}
+\frametitle{DemoUpCARMA: Management of Swiss \ce{CO2}?}
+\begin{center}
+\includegraphics[width=\textwidth]{demoupcarma}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\ce{CO2} Sequestration by Mineralisation in Aquifers}
+\begin{center}
+
+\only<1>{
+\includegraphics[width=\textwidth]{example_ccs}
+}
+\only<2>{
+\includegraphics[width=0.7\textwidth]{Matter_Science_CCS}\\[5ex]
+Trace the fate of the injected \ce{CO2}\\[2ex]
+Label fluids with gas tracers: \ce{^14CO_2}, \ce{SF6} and \ce{SF5CF3}
+}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{DemoUpSTORAGE: \ce{CO2} Injection Test in Iceland}
+\begin{center}
+
+
+\only<1>{
+\includegraphics[width=\textwidth]{Iceland_Reykjanes.pdf} % seawater filled aquifer
+}
+
+\only<2>{
+\includegraphics[width=\textwidth]{CCS_diagram_demoup}\\[3ex]
+\url{http://demoupstorage.ethz.ch}
+}
+
+\only<3>{
+\includegraphics[width=\textwidth]{fieldsite_droneshot}
+}
+
+\only<4>{
+\includegraphics[height=0.65\textheight, angle=-90]{mR_in_container}
+}
+
+\only<5>{
+\includegraphics[width=0.9\textwidth]{HE_Board_Installed}\\[2ex]
+\SI{70}{ppm} \ce{He} in injected \ce{CO2}
+}
+
+\only<6>{
+\includegraphics[width=\textwidth]{field_setup}\\[2ex]
+Injected \ce{CO2} labelled with \SI{70}{ppm} \ce{He}:\\ $\ce{CO2}/\ce{He} =\num{14e3}$\\[2ex]
+miniRUEDI for autonomous dissolved-gas analysis:\\ \ce{CO2}, \ce{He}, \ce{Ar}, \ce{Kr}, \ce{N2}, \ce{O2} (every 10\,min)
+}
+
+\end{center}
+\end{frame}
+
+
+% \begin{frame}
+% \frametitle{miniRUEDI: Autonomous, On-Site Gas Analysis}
+% \begin{center}
+% % \only<1>{
+% %   \vspace{-2ex}
+% %   \mbox{{\bf G}as-{\bf E}quilibrium {\bf M}embrane-{\bf I}nlet {\bf M}ass {\bf S}pectrometry (GE-MIMS)}\\[1ex]
+% %   \includegraphics[width=0.9\textwidth]{GE_MIMS_module}\\
+% %   {Patent EP4109092}
+% % }
+% %
+% % \only<2>{
+% % \includegraphics[width=0.7\textwidth]{mR_schema}
+% % \phantom{x}\\[3ex]Diagram of miniRUEDI gas analyzer for analysis of\\[2ex]
+% % He, (Ne), Ar, Kr, (Xe), \ce{N2}, \ce{O2}, \ce{CO2}, \ce{CH4}, \ce{H2}, etc.\\[2ex]
+% % Combined tracers for physics and biogeochemical processes}
+% %
+% % \only<3>{
+% % \includegraphics[height=0.7\textheight]{camel_oman_miniRUEDI}
+% % \\[1ex]
+% %   Simple, self-contained instrument for on-site gas analysis\\[1ex] 
+% %   {\scriptsize Mächler et al. 2012 ES\&T, Brennwald et al. 2016 ES\&T, \url{www.gasometrix.com}}
+% % }
+%
+%
+%
+% \only<1>{
+% \includegraphics[height=0.7\textheight]{camel_oman_miniRUEDI}
+% \\[1ex]
+%   Simple, self-contained instrument for on-site gas analysis\\[1ex] 
+%   {\scriptsize Mächler et al. 2012 ES\&T, Brennwald et al. 2016 ES\&T, \url{www.gasometrix.com}}
+%
+% miniRUEDI with camel: most of you know how this works: install miniRUEDI to let it monitor the gas concentrations in the water, ask a local to look after the instrument, and then you go home and wait for the data -- that's exactly what we did, with the only exception that there are no camels in Iceland.
+% }
+%
+% \only<2>{
+%   \vspace{-2ex}
+%   \mbox{{\bf G}as-{\bf E}quilibrium {\bf M}embrane-{\bf I}nlet {\bf M}ass {\bf S}pectrometry (GE-MIMS)}\\[1ex]
+%   \includegraphics[width=0.9\textwidth]{GE_MIMS_module}\\
+%   {Patent EP4109092}
+% }
+%
+% \only<3>{
+% \includegraphics[width=0.7\textwidth]{mR_schema}
+% \phantom{x}\\[3ex]Diagram of miniRUEDI gas analyzer for analysis of\\[2ex]
+% He, (Ne), Ar, Kr, (Xe), \ce{N2}, \ce{O2}, \ce{CO2}, \ce{CH4}, \ce{H2}, etc.\\[2ex]
+% Combined tracers for physics and biogeochemical processes}
+%
+% \end{center}
+% \end{frame}
+
+
+% \begin{frame}
+% \frametitle{DemoUpStorage Experiment in Iceland}
+% \begin{center}
+% \includegraphics[width=\textwidth]{field_setup}\\[2ex]
+% Injected \ce{CO2} labelled with \SI{70}{ppm} \ce{He}:\\ $\ce{CO2}/\ce{He} =\num{14e3}$\\[2ex]
+% miniRUEDI for autonomous dissolved-gas analysis:\\ \ce{CO2}, \ce{He}, \ce{Ar}, \ce{Kr}, \ce{N2}, \ce{O2} (every 10\,min)
+% \end{center}
+% \end{frame}
+%
+%
+\begin{frame}
+\frametitle{Shallow Well: Dissolved Gases}
+\begin{center}
+\includegraphics[width=\textwidth]{mR_gasevolution_shallowWell.pdf}
+
+% NEAR ATMOSPHERIC, WITH EA SUPERSATURATION
+%
+% ALL SPECIES CO-EVOLVE FOLLOWING A SIMILAR DYNAMIC
+%
+% WE SEE BACKGROUND GROUNDWATER
+%
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Deep Well: Dissolved Gases}
+\begin{center}
+\includegraphics[width=\textwidth]{mR_gasevolution_extractionWell.pdf}
+
+% ATMOSPHERIC GASES: SAME AS WITH SHALLOW WELL
+%
+% HE SHOWS MAJOR INCREASE
+%
+% CO2 CO-EVOLVES WITH ATMOSPHERIC GASES
+
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Deep Well: \ce{He} and \ce{CO2}}
+\begin{center}
+% \includegraphics[width=0.9\textwidth]{mR_holes_S_E_He_CO2}\\[2ex]
+\includegraphics<1>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_1.pdf}
+\includegraphics<2>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_2.pdf}
+\includegraphics<3>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_3.pdf}
+
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Efficient Tracer Tool for CCS monitoring}
+
+\phantom{u}\\[2ex]
+
+\begin{itemize}
+\setlength{\itemsep}{3ex}
+% \item miniRUEDI + GE-MIMS provides continuous and efficient gas monitoring in CCS system
+
+\item He (or other noble gases) are useful tracers for efficient, continuous monitoring of \ce{CO2} and fluids in CCS systems.
+
+\item Shallow well near injection shows no signs\\ of \ce{CO2} or tracer He from the injection.
+
+\item Deep well \SI{100}{m} downstream of injection:\\[2ex]
+  \begin{itemize}
+  \setlength{\itemsep}{1.2ex}
+  \item He tracer indicates arrival of injection fluid.
+  \item \ce{CO2} remains close to natural background.
+  \end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Questions to \href{mailto:matthias.brennwald@eawag.ch}{matthias.brennwald@eawag.ch}}
+%\vspace{2ex}
+\begin{center}
+\includegraphics[width=\textwidth]{outlook}\\
+{\scriptsize Photo: Jan Franssen, University of Montreal}\\[2ex]
+
+\end{center}
+
+\end{frame}
+
+
+\end{document}

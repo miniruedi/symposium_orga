@@ -1,0 +1,177 @@
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass{beamer}
+%\documentclass[handout]{beamer}
+
+\graphicspath{{figures}}
+
+% PACKAGE INCLUDES:f
+\usepackage{amsmath}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{datetime} % for dates in english format
+\usefonttheme{default}
+\setbeamercolor*{structure}{fg=black,bg=}
+\setbeamercolor*{normal text}{fg=black,bg=}
+\setbeamertemplate{navigation symbols}{}  % suppress navigation symbols
+%\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{background2.jpg}}
+\usepackage{translator}\selectlanguage{english}
+\usepackage{MnSymbol}
+\usepackage[utf8]{inputenc} 
+\usepackage{ragged2e}\justifying % Blocksatz im Fliesstext (mit Silbentrennung)
+\usepackage[T1]{fontenc} % für Trennung von Wörtern mit Umlauten
+\usepackage{helvet}
+\usepackage{graphicx}
+\usepackage{epstopdf} \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+\usepackage[version=4]{mhchem} \mhchemoptions{mathfontcommand=\mathsf}
+\usepackage{cancel}
+%\usepackage{wasysym} % per permil symbol
+%\usepackage{skull} % for skull symbol
+%\usepackage{marvosym} % for lightning symol
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{siunitx} \sisetup{separate-uncertainty=true}
+\usepackage{marvosym}
+\usepackage{pifont}
+
+
+% COMMAND (RE)DEFINITIONS
+% \renewcommand{\thefootnote}{\ensuremath{*}} % all footnotes use a "*" marker (which is identical to the star used for equilibrium conentrations!)
+\renewcommand{\thefootnote}{\ensuremath{\star}} % all footnotes use a star marker (which is really similar to the star used for equilibrium conentrations!)
+% \renewcommand{\thefootnote}{\ensuremath{\ddagger}} % all footnotes use a "*" marker
+\renewcommand{\footnoterule}{\vspace{1ex}} % don't draw a horizontal rule (may be confusing if footnote does not appear on first overlay, but leave some space
+\let\footnotesize\scriptsize % use smaller font for footnotes
+\newcommand{\degC}{\ensuremath{^{\circ}\text{C}}}
+\newcommand{\vstretch}[1]{\vspace{\stretch{#1}}}
+\newcommand{\hstretch}[1]{\hspace{\stretch{#1}}}
+
+\newcommand{\conc}[1]{\ensuremath{C_{#1}}} % konzentration von substanz i
+\newcommand{\concEq}[1]{\ensuremath{\conc{i}^*}} % glgw-konzentration von substanz i
+\newcommand{\Tw}{\ensuremath{T_\text{W}}} % T_W
+\newcommand{\pTot}{\ensuremath{p_{\text{tot}}}} % totaldruck
+\newcommand{\pp}[1]{\ensuremath{p_{#1}}} % partialdruck von substanz i
+\newcommand{\mb}[1]{\ensuremath{\chi_{#1}}} % molenbruch von substanz i
+\newcommand{\henry}[1]{\ensuremath{H_{#1}}} % henrykoeffizient von substanz i
+\newcommand{\henryInv}[1]{\ensuremath{\lambda_{#1}}} % inverser henrykoeffizient von substanz i
+
+
+\title{Welcome to the miniRUEDI Symposium 2025!}
+
+% \author{M.S.~Brennwald*, J.~Junker, R.~Kipfer, A.~Obermann, M.~Voigt, C.~Wang, A.~Zappone\\[5ex] \small *Swiss Federal Institute of Aquatic Science and Technology (Eawag)}
+
+\date{18--20 Nov 2025}
+
+
+% \author{Brennwald}
+
+
+% \date{9 July 2025 / Goldschmidt 2025}
+
+
+% FORMATTING BEAMER THINGS
+\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{frametitle}{
+\centerline{\mbox{\insertframetitle}}
+\par
+} 
+
+% \newcommand{\defaultframetitle}{\frametitle{\mbox{\insertsection}}}
+
+
+
+
+% Key items to address in your opening
+%
+% Welcome and appreciation
+%
+% Greet the audience (participants, speakers, organizers, sponsors if relevant).
+%
+% Thank the organizing team and any supporting institutions.
+%
+% Purpose and goals of the symposium
+%
+% State why the event exists (e.g., “exchange ideas,” “foster collaboration,” “showcase ongoing work”).
+%
+% Theme and scope
+%
+% Briefly introduce the core topic(s).
+%
+% What makes this meeting timely or important?
+%
+% Structure / agenda overview
+%
+% Outline the schedule at a high level (sessions, breaks, posters, social events).
+%
+% Mention any logistics (e.g., “coffee is here,” “wifi details are in your program”).
+%
+% Rules of engagement / informal culture
+%
+% Encourage questions, open discussion, collaboration.
+%
+% Clarify expectations (e.g., timing, respecting session chairs, where to post slides, etc.)
+%
+% Housekeeping
+%
+% Safety / emergency exits (brief)
+%
+% Facilities: restrooms, lunch location, where to find help/organizers.
+%
+% Highlight special features
+%
+% Keynote speakers or unusual session formats.
+%
+% Any student competition, poster prizes, etc.
+%
+% Get people excited
+%
+% End on an energizing note: “We’re looking forward to great discussions.”
+%
+%
+%
+% PROGRAM
+% INFORMAL
+%
+% HELPERS
+%
+% COLLECT SLIDES
+%
+% DINNER
+%
+% WIFI
+%
+% LUNCH, SNACKS
+%
+% DINNER WED, WHO?
+%
+% QUESTIONS, PROBLEMS, FEEDBACK
+
+
+\begin{document}
+
+\begin{frame}
+\frametitle{Program}
+\begin{center}
+TABLE WITH SCHEDULE
+
+EVERYONE AS EXPECTED?
+
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Program}
+\begin{center}
+TABLE WITH SCHEDULE
+
+EVERYONE AS EXPECTED?
+
+\end{center}
+\end{frame}
+
+
+
+\end{document}
