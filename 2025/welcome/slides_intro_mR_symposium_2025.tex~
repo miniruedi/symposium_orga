@@ -3,6 +3,12 @@
 \documentclass{beamer}
 %\documentclass[handout]{beamer}
 
+
+
+\usepackage{geometry}
+
+
+
 \graphicspath{{figures}}
 
 % PACKAGE INCLUDES:f
@@ -55,20 +61,11 @@
 \newcommand{\henryInv}[1]{\ensuremath{\lambda_{#1}}} % inverser henrykoeffizient von substanz i
 
 
-\title{Noble Gas Tracing of \ce{CO2} Injection Fluids for\\ Carbon Capture and Storage (CCS)\\ using the miniRUEDI}
+\title{Welcome to the miniRUEDI Symposium 2025!}
 
 % \author{M.S.~Brennwald*, J.~Junker, R.~Kipfer, A.~Obermann, M.~Voigt, C.~Wang, A.~Zappone\\[5ex] \small *Swiss Federal Institute of Aquatic Science and Technology (Eawag)}
 
-\date{miniRUEDI Symposium 19 Nov 2025 in Zurich}
 
-
-
-\author{M.S.~Brennwald\textsuperscript{1*}, J.~Junker\textsuperscript{2}, R.~Kipfer\textsuperscript{1,2}, A.~Obermann\textsuperscript{2}, M.~Voigt\textsuperscript{3}, C.~Wang\textsuperscript{1}, A.~Zappone\textsuperscript{2}\\[5ex] \scriptsize 1: Swiss Federal Institute of Aquatic Science and Technology (Eawag)\\[1ex] 2: Swiss Federal Institute of Technology in Zurich (ETHZ)\\[1ex] 3: Carbfix hf.}
-
-% \author{Brennwald}
-
-
-% \date{9 July 2025 / Goldschmidt 2025}
 
 
 % FORMATTING BEAMER THINGS
@@ -79,214 +76,101 @@
 \par
 } 
 
-% \newcommand{\defaultframetitle}{\frametitle{\mbox{\insertsection}}}
+
 
 \begin{document}
 
-\begin{frame}
-\maketitle
-\end{frame}
-
 
 \begin{frame}
-\frametitle{DemoUpCARMA: Management of Swiss \ce{CO2}?}
+% Welcome and appreciation
+% Greet the audience (participants, speakers, organizers, sponsors if relevant).
+% Thank the organizing team and any supporting institutions.
+
+\frametitle{}
 \begin{center}
-\includegraphics[width=\textwidth]{demoupcarma}
+{\fontsize{50pt}{60pt}\selectfont WELCOME}\\[10ex]
+
+{\huge miniRUEDI Symposium\\[2ex] 18--20 Nov 2025}
+
 \end{center}
 \end{frame}
 
 
-\begin{frame}
-\frametitle{\ce{CO2} Sequestration by Mineralisation in Aquifers}
-\begin{center}
 
-\only<1>{
-\includegraphics[width=\textwidth]{example_ccs}
-}
-\only<2>{
-\includegraphics[width=0.7\textwidth]{Matter_Science_CCS}\\[5ex]
-Trace the fate of the injected \ce{CO2}\\[2ex]
-Label fluids with gas tracers: \ce{^14CO_2}, \ce{SF6} and \ce{SF5CF3}
-}
-\end{center}
+% Purpose and goals of the symposium
+% State why the event exists (e.g., “exchange ideas,” “foster collaboration,” “showcase ongoing work”).
+% Theme and scope
+% Briefly introduce the core topic(s).
+% What makes this meeting timely or important?
+% Structure / agenda overview
+% Outline the schedule at a high level --> EVERYONE WHO PROMISED A TALK SHOULD BE ON HERE!
+% \frametitle{Program}
+{
+\usebackgroundtemplate{\hspace{0.075\paperwidth}\includegraphics[width=0.85\paperwidth,height=\paperheight]{program.jpg}}
+\begin{frame}[plain]
+  % empty frame, the background image fills the whole slide
 \end{frame}
+\usebackgroundtemplate{}
+}
+
+
+
+
+
 
 
 \begin{frame}
-\frametitle{DemoUpSTORAGE: \ce{CO2} Injection Test in Iceland}
-\begin{center}
+% Mention any logistics (e.g., “coffee is here,” “wifi details are in your program”).
+% Rules of engagement / informal culture
+% Encourage questions, open discussion, collaboration.
+% Clarify expectations (e.g., timing, respecting session chairs, where to post slides, etc.)
+% Housekeeping
+% lunch location, where to find help/organizers.
+% Feedback: if things don't go as you'd like --> tell me, if things are going well --> tell everyone about it
+\frametitle{How do we do this?}
 
 
-\only<1>{
-\includegraphics[width=\textwidth]{Iceland_Reykjanes.pdf} % seawater filled aquifer
-}
+\only<1-3>{
+\begin{itemize}
+\setlength{\itemsep}{3ex}
+\item Presenters:
+  \begin{itemize}
+  \item Copy slides to \emph{the} computer.
+  \item Present using \emph{the} computer.
+  \item Talks are 20\,min, followed by 5\,min to discuss questions
+  \item Public slides?
+  \end{itemize}
 
-\only<2>{
-\includegraphics[width=\textwidth]{CCS_diagram_demoup}\\[3ex]
-\url{http://demoupstorage.ethz.ch}
-}
+\pause
 
-\only<3>{
-\includegraphics[width=\textwidth]{fieldsite_droneshot}
+\item Audience:\\ \emph{Ask! Discuss!} (during or after the talk)
+
+\pause
+
+\item Session Chairs:\\ Keep the flow, watch the time (don't be too Swiss), engage discussion.
+\end{itemize}
 }
 
 \only<4>{
-\includegraphics[height=0.65\textheight, angle=-90]{mR_in_container}
-}
-
-\only<5>{
-\includegraphics[width=0.9\textwidth]{HE_Board_Installed}\\[2ex]
-\SI{70}{ppm} \ce{He} in injected \ce{CO2}
-}
-
-\only<6>{
-\includegraphics[width=\textwidth]{field_setup}\\[2ex]
-Injected \ce{CO2} labelled with \SI{70}{ppm} \ce{He}:\\ $\ce{CO2}/\ce{He} =\num{14e3}$\\[2ex]
-miniRUEDI for autonomous dissolved-gas analysis:\\ \ce{CO2}, \ce{He}, \ce{Ar}, \ce{Kr}, \ce{N2}, \ce{O2} (every 10\,min)
-}
-
-\end{center}
-\end{frame}
-
-
-% \begin{frame}
-% \frametitle{miniRUEDI: Autonomous, On-Site Gas Analysis}
-% \begin{center}
-% % \only<1>{
-% %   \vspace{-2ex}
-% %   \mbox{{\bf G}as-{\bf E}quilibrium {\bf M}embrane-{\bf I}nlet {\bf M}ass {\bf S}pectrometry (GE-MIMS)}\\[1ex]
-% %   \includegraphics[width=0.9\textwidth]{GE_MIMS_module}\\
-% %   {Patent EP4109092}
-% % }
-% %
-% % \only<2>{
-% % \includegraphics[width=0.7\textwidth]{mR_schema}
-% % \phantom{x}\\[3ex]Diagram of miniRUEDI gas analyzer for analysis of\\[2ex]
-% % He, (Ne), Ar, Kr, (Xe), \ce{N2}, \ce{O2}, \ce{CO2}, \ce{CH4}, \ce{H2}, etc.\\[2ex]
-% % Combined tracers for physics and biogeochemical processes}
-% %
-% % \only<3>{
-% % \includegraphics[height=0.7\textheight]{camel_oman_miniRUEDI}
-% % \\[1ex]
-% %   Simple, self-contained instrument for on-site gas analysis\\[1ex] 
-% %   {\scriptsize Mächler et al. 2012 ES\&T, Brennwald et al. 2016 ES\&T, \url{www.gasometrix.com}}
-% % }
-%
-%
-%
-% \only<1>{
-% \includegraphics[height=0.7\textheight]{camel_oman_miniRUEDI}
-% \\[1ex]
-%   Simple, self-contained instrument for on-site gas analysis\\[1ex] 
-%   {\scriptsize Mächler et al. 2012 ES\&T, Brennwald et al. 2016 ES\&T, \url{www.gasometrix.com}}
-%
-% miniRUEDI with camel: most of you know how this works: install miniRUEDI to let it monitor the gas concentrations in the water, ask a local to look after the instrument, and then you go home and wait for the data -- that's exactly what we did, with the only exception that there are no camels in Iceland.
-% }
-%
-% \only<2>{
-%   \vspace{-2ex}
-%   \mbox{{\bf G}as-{\bf E}quilibrium {\bf M}embrane-{\bf I}nlet {\bf M}ass {\bf S}pectrometry (GE-MIMS)}\\[1ex]
-%   \includegraphics[width=0.9\textwidth]{GE_MIMS_module}\\
-%   {Patent EP4109092}
-% }
-%
-% \only<3>{
-% \includegraphics[width=0.7\textwidth]{mR_schema}
-% \phantom{x}\\[3ex]Diagram of miniRUEDI gas analyzer for analysis of\\[2ex]
-% He, (Ne), Ar, Kr, (Xe), \ce{N2}, \ce{O2}, \ce{CO2}, \ce{CH4}, \ce{H2}, etc.\\[2ex]
-% Combined tracers for physics and biogeochemical processes}
-%
-% \end{center}
-% \end{frame}
-
-
-% \begin{frame}
-% \frametitle{DemoUpStorage Experiment in Iceland}
-% \begin{center}
-% \includegraphics[width=\textwidth]{field_setup}\\[2ex]
-% Injected \ce{CO2} labelled with \SI{70}{ppm} \ce{He}:\\ $\ce{CO2}/\ce{He} =\num{14e3}$\\[2ex]
-% miniRUEDI for autonomous dissolved-gas analysis:\\ \ce{CO2}, \ce{He}, \ce{Ar}, \ce{Kr}, \ce{N2}, \ce{O2} (every 10\,min)
-% \end{center}
-% \end{frame}
-%
-%
-\begin{frame}
-\frametitle{Shallow Well: Dissolved Gases}
-\begin{center}
-\includegraphics[width=\textwidth]{mR_gasevolution_shallowWell.pdf}
-
-% NEAR ATMOSPHERIC, WITH EA SUPERSATURATION
-%
-% ALL SPECIES CO-EVOLVE FOLLOWING A SIMILAR DYNAMIC
-%
-% WE SEE BACKGROUND GROUNDWATER
-%
-\end{center}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Deep Well: Dissolved Gases}
-\begin{center}
-\includegraphics[width=\textwidth]{mR_gasevolution_extractionWell.pdf}
-
-% ATMOSPHERIC GASES: SAME AS WITH SHALLOW WELL
-%
-% HE SHOWS MAJOR INCREASE
-%
-% CO2 CO-EVOLVES WITH ATMOSPHERIC GASES
-
-\end{center}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Deep Well: \ce{He} and \ce{CO2}}
-\begin{center}
-% \includegraphics[width=0.9\textwidth]{mR_holes_S_E_He_CO2}\\[2ex]
-\includegraphics<1>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_1.pdf}
-\includegraphics<2>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_2.pdf}
-\includegraphics<3>[width=0.9\textwidth]{mR_gasevolution_extractionWell_HeCO2_3.pdf}
-
-\end{center}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Efficient Tracer Tool for CCS monitoring}
-
-\phantom{u}\\[2ex]
-
 \begin{itemize}
-\setlength{\itemsep}{3ex}
-% \item miniRUEDI + GE-MIMS provides continuous and efficient gas monitoring in CCS system
-
-\item He (or other noble gases) are useful tracers for efficient, continuous monitoring of \ce{CO2} and fluids in CCS systems.
-
-\item Shallow well near injection shows no signs\\ of \ce{CO2} or tracer He from the injection.
-
-\item Deep well \SI{100}{m} downstream of injection:\\[2ex]
-  \begin{itemize}
-  \setlength{\itemsep}{1.2ex}
-  \item He tracer indicates arrival of injection fluid.
-  \item \ce{CO2} remains close to natural background.
-  \end{itemize}
-
-\end{itemize}
-
+\setlength{\itemsep}{2ex}
+\item Coffee, tea, snacks: it's all yours
+\item Lunch: aQa restaurant downstairs\\
+Tables reserved for us
+\item Group Dinner on Wed: free drinks! Who is in?
+\item Helpers: Angie, Morgan, RoKi, Sebi, Steph, Yama
+\item If something is not right: tell me! Ask us!\end{itemize}
+}
 \end{frame}
 
+\end{document}
 
-\begin{frame}
-\frametitle{Questions to \href{mailto:matthias.brennwald@eawag.ch}{matthias.brennwald@eawag.ch}}
-%\vspace{2ex}
+\frametitle{Start!}
 \begin{center}
-\includegraphics[width=\textwidth]{outlook}\\
-{\scriptsize Photo: Jan Franssen, University of Montreal}\\[2ex]
-
+TABLE WITH SCHEDULE
 \end{center}
-
 \end{frame}
+
 
 
 \end{document}

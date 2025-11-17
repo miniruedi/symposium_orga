@@ -3,6 +3,12 @@
 \documentclass{beamer}
 %\documentclass[handout]{beamer}
 
+
+
+\usepackage{geometry}
+
+
+
 \graphicspath{{figures}}
 
 % PACKAGE INCLUDES:f
@@ -59,119 +65,107 @@
 
 % \author{M.S.~Brennwald*, J.~Junker, R.~Kipfer, A.~Obermann, M.~Voigt, C.~Wang, A.~Zappone\\[5ex] \small *Swiss Federal Institute of Aquatic Science and Technology (Eawag)}
 
-\date{18--20 Nov 2025}
 
-
-% \author{Brennwald}
-
-
-% \date{9 July 2025 / Goldschmidt 2025}
 
 
 % FORMATTING BEAMER THINGS
-\setbeamertemplate{footline}[frame number]
+% \setbeamertemplate{footline}[frame number]
 
 \setbeamertemplate{frametitle}{
 \centerline{\mbox{\insertframetitle}}
 \par
 } 
 
-% \newcommand{\defaultframetitle}{\frametitle{\mbox{\insertsection}}}
-
-
-
-
-% Key items to address in your opening
-%
-% Welcome and appreciation
-%
-% Greet the audience (participants, speakers, organizers, sponsors if relevant).
-%
-% Thank the organizing team and any supporting institutions.
-%
-% Purpose and goals of the symposium
-%
-% State why the event exists (e.g., “exchange ideas,” “foster collaboration,” “showcase ongoing work”).
-%
-% Theme and scope
-%
-% Briefly introduce the core topic(s).
-%
-% What makes this meeting timely or important?
-%
-% Structure / agenda overview
-%
-% Outline the schedule at a high level (sessions, breaks, posters, social events).
-%
-% Mention any logistics (e.g., “coffee is here,” “wifi details are in your program”).
-%
-% Rules of engagement / informal culture
-%
-% Encourage questions, open discussion, collaboration.
-%
-% Clarify expectations (e.g., timing, respecting session chairs, where to post slides, etc.)
-%
-% Housekeeping
-%
-% Safety / emergency exits (brief)
-%
-% Facilities: restrooms, lunch location, where to find help/organizers.
-%
-% Highlight special features
-%
-% Keynote speakers or unusual session formats.
-%
-% Any student competition, poster prizes, etc.
-%
-% Get people excited
-%
-% End on an energizing note: “We’re looking forward to great discussions.”
-%
-%
-%
-% PROGRAM
-% INFORMAL
-%
-% HELPERS
-%
-% COLLECT SLIDES
-%
-% DINNER
-%
-% WIFI
-%
-% LUNCH, SNACKS
-%
-% DINNER WED, WHO?
-%
-% QUESTIONS, PROBLEMS, FEEDBACK
 
 
 \begin{document}
 
-\begin{frame}
-\frametitle{Program}
-\begin{center}
-TABLE WITH SCHEDULE
 
-EVERYONE AS EXPECTED?
+\begin{frame}
+% Welcome and appreciation
+% Greet the audience (participants, speakers, organizers, sponsors if relevant).
+% Thank the organizing team and any supporting institutions.
+
+\frametitle{}
+\begin{center}
+{\fontsize{50pt}{60pt}\selectfont WELCOME}\\[10ex]
+
+{\huge miniRUEDI Symposium\\[2ex] 18--20 Nov 2025}
 
 \end{center}
 \end{frame}
 
 
 
+% Purpose and goals of the symposium
+% State why the event exists (e.g., “exchange ideas,” “foster collaboration,” “showcase ongoing work”).
+% Theme and scope
+% Briefly introduce the core topic(s).
+% What makes this meeting timely or important?
+% Structure / agenda overview
+% Outline the schedule at a high level --> EVERYONE WHO PROMISED A TALK SHOULD BE ON HERE!
+% \frametitle{Program}
+{
+\usebackgroundtemplate{\hspace{0.075\paperwidth}\includegraphics[width=0.85\paperwidth,height=\paperheight]{program.jpg}}
+\begin{frame}[plain]
+  % empty frame, the background image fills the whole slide
+\end{frame}
+\usebackgroundtemplate{}
+}
 
 \begin{frame}
-\frametitle{Program}
-\begin{center}
-TABLE WITH SCHEDULE
+% Mention any logistics (e.g., “coffee is here,” “wifi details are in your program”).
+% Rules of engagement / informal culture
+% Encourage questions, open discussion, collaboration.
+% Clarify expectations (e.g., timing, respecting session chairs, where to post slides, etc.)
+% Housekeeping
+% lunch location, where to find help/organizers.
+% Feedback: if things don't go as you'd like --> tell me, if things are going well --> tell everyone about it
+\frametitle{How do we do this?}
 
-EVERYONE AS EXPECTED?
 
-\end{center}
+\only<1-3>{
+\begin{itemize}
+\setlength{\itemsep}{3ex}
+\item Presenters:
+  \begin{itemize}
+  \item Copy slides to \emph{the} computer.
+  \item Present using \emph{the} computer.
+  \item Talks are 20\,min, followed by 5\,min to discuss questions.
+  \item Public slides?
+  \end{itemize}
+
+\pause
+
+\item Audience:\\ \emph{Ask! Discuss!} (during or after the talk)
+
+\pause
+
+\item Session Chairs:\\ Keep the flow, watch the time (don't be too Swiss), engage discussion.
+\end{itemize}
+}
+
+\only<4>{
+\begin{itemize}
+\setlength{\itemsep}{2ex}
+\item Coffee, tea, snacks: it's all yours (the breaks are long!)
+\item Lunch:\\
+aQa restaurant downstairs\\
+Tables reserved for us
+\item Group Dinner on Wed: free drinks! Who is in?
+\item Helpers: Angie, Morgan, RoKi, Sebi, Steph, Yama
+\item If something is not right: let me know!
+\end{itemize}
+}
 \end{frame}
 
+{
+\usebackgroundtemplate{\hspace{0.075\paperwidth}\includegraphics[width=0.85\paperwidth,height=\paperheight]{program.jpg}}
+\begin{frame}[plain]
+  % empty frame, the background image fills the whole slide
+\end{frame}
+\usebackgroundtemplate{}
+}
 
 
 \end{document}
